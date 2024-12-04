@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Variables and Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Variables and Data Types</h1>
+    <div id="output"></div>
+
+    <script>
+        // Variables and Data Types Example
+        let name = "John";
+        let age = 25;
+        let isActive = true;
+        let user = { name: "Alice", age: 30 };
+        let numbers = [1, 2, 3, 4, 5];
+
+        document.getElementById('output').innerHTML = `
+            Name: ${name} <br>
+            Age: ${age} <br>
+            Active: ${isActive} <br>
+            User Object: ${JSON.stringify(user)} <br>
+            Numbers Array: ${numbers.join(", ")}
+        `;
+    </script>
+</body>
+</html>

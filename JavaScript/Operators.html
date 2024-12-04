@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Operators</h1>
+    <div id="output"></div>
+
+    <script>
+        // Operators Example
+        let a = 5;
+        let b = 3;
+        let addition = a + b;
+        let multiplication = a * b;
+        let comparison = a === b;
+        let logical = (a > b) && (b > 0);
+
+        document.getElementById('output').innerHTML = `
+            Addition: ${addition} <br>
+            Multiplication: ${multiplication} <br>
+            Comparison (a === b): ${comparison} <br>
+            Logical (a > b && b > 0): ${logical}
+        `;
+    </script>
+</body>
+</html>

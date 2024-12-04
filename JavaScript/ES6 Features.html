@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - ES6 Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - ES6 Features</h1>
+    <div id="output"></div>
+
+    <script>
+        // ES6 Features Example
+
+        // Destructuring
+        const person = { name: "Alice", age: 25 };
+        const { name, age } = person;
+
+        // Template Literals
+        const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+
+        // Arrow Function
+        const add = (a, b) => a + b;
+
+        // Default Parameters
+        const greet = (name = "Guest") => `Hello, ${name}!`;
+
+        document.getElementById('output').innerHTML = `
+            ${greeting} <br>
+            2 + 3 = ${add(2, 3)} <br>
+            Greeting with default name: ${greet()}
+        `;
+    </script>
+</body>
+</html>

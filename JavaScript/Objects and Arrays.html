@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objects and Arrays</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Objects and Arrays</h1>
+    <div id="output"></div>
+
+    <script>
+        // Objects and Arrays Example
+        const user = {
+            name: "Alice",
+            age: 30,
+            greet: function() {
+                return `Hello, ${this.name}`;
+            }
+        };
+
+        const fruits = ["apple", "banana", "orange"];
+
+        document.getElementById('output').innerHTML = `
+            User Name: ${user.name} <br>
+            User Greeting: ${user.greet()} <br>
+            Fruits List: ${fruits.join(", ")}
+        `;
+    </script>
+</body>
+</html>

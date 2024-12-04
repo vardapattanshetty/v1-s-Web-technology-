@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Callbacks and Promises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Callbacks and Promises</h1>
+    <button id="runCallbackButton">Run Callback</button>
+    <button id="runPromiseButton">Run Promise</button>
+    <div id="output"></div>
+
+    <script>
+        // Callback Example
+        function fetchData(callback) {
+            setTimeout(() => {
+                callback("Data fetched using callback!");
+            }, 1000);
+        }
+
+        document.getElementById('runCallbackButton').addEventListener('click', function() {
+            fetchData(function(data) {
+                document.getElementById('output').innerHTML = data;
+            });
+        });
+
+        // Promise Example
+        function fetchDataWithPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Data fetched using Promise!");
+                }, 1000);
+            });
+        }
+
+        document.getElementById('runPromiseButton').addEventListener('click', function() {
+            fetchDataWithPromise()
+                .then(data => {
+                    document.getElementById('output').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('output').innerHTML = 'Error: ' + error;
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Control Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Control Flow</h1>
+    <div id="output"></div>
+
+    <script>
+        // Control Flow Example
+        let day = "Monday";
+        let message = "";
+
+        if (day === "Monday") {
+            message = "Start of the week!";
+        } else if (day === "Friday") {
+            message = "Almost the weekend!";
+        } else {
+            message = "It's just another day.";
+        }
+
+        document.getElementById('output').innerHTML = `
+            Day: ${day} <br>
+            Message: ${message}
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Error Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Error Handling</h1>
+    <button id="triggerErrorButton">Trigger Error</button>
+    <div id="output"></div>
+
+    <script>
+        // Error Handling Example using try-catch
+        document.getElementById('triggerErrorButton').addEventListener('click', function() {
+            try {
+                let result = riskyFunction();  // This will cause an error
+                document.getElementById('output').innerHTML = `Result: ${result}`;
+            } catch (error) {
+                document.getElementById('output').innerHTML = `Error: ${error.message}`;
+            }
+        });
+
+        function riskyFunction() {
+            throw new Error('Something went wrong!');
+        }
+    </script>
+</body>
+</html>
