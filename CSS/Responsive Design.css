@@ -1,0 +1,17 @@
+/* Mobile-first approach */
+.container {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      width: 60%;
+    }
+  }
+  

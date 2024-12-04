@@ -1,0 +1,10 @@
+button::before {
+    content: 'Click me: ';
+    color: blue;
+  }
+  
+  button::after {
+    content: ' ✔';
+    color: green;
+  }
+  
